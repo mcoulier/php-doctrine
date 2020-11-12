@@ -1,18 +1,24 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
-/** @Embeddable */
-class address {
-    /** @Column(type="string") **/
+namespace App\Entity;
+
+use App\Repository\AddressRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/** @ORM\Embeddable */
+class Address
+{
+    /** @ORM\Column(type="string", length=255) * */
     private $street;
 
-    /** @Column(type="string") **/
+    /** @ORM\Column(type="integer") * */
     private $streetNumber;
 
-    /** @Column(type="string") **/
+    /** @ORM\Column(type="string", length=255) * */
     private $city;
 
-    /** @Column(type="string") **/
+    /** @ORM\Column(type="integer") * */
     private $zipcode;
 
     public function __construct(string $street, int $streetNumber, string $city, int $zipcode)
@@ -22,27 +28,27 @@ class address {
         $this->city = $city;
         $this->zipcode = $zipcode;
     }
-    
+
     public function getStreet(): string
     {
         return $this->street;
     }
-    
+
     public function setStreet(string $street)
     {
         $this->street = $street;
     }
-    
+
     public function getStreetNumber(): int
     {
         return $this->streetNumber;
     }
-    
+
     public function setStreetNumber(int $streetNumber)
     {
         $this->streetNumber = $streetNumber;
     }
-    
+
     public function getCity(): string
     {
         return $this->city;
@@ -57,7 +63,7 @@ class address {
     {
         return $this->zipcode;
     }
-    
+
     public function setZipcode(int $zipcode)
     {
         $this->zipcode = $zipcode;
