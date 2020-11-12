@@ -21,15 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="972e4d45-b09e-4998-b11a-cbb72bd0a33e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Address.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Student.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Teacher.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -165,7 +165,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605169319186</updated>
-      <workItem from="1605169325628" duration="9846000" />
+      <workItem from="1605169325628" duration="10389000" />
+      <workItem from="1605187535415" duration="6577000" />
     </task>
     <servers />
   </component>
@@ -182,12 +183,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="192" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605173069732">
       <screen x="0" y="23" width="1280" height="719" />
     </state>
     <state x="368" y="192" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.719/-2560.-373.2560.1417@0.23.1280.719" timestamp="1605173069732" />
+    <state x="149" y="23" width="982" height="719" key="SettingsEditor" timestamp="1605187448298">
+      <screen x="0" y="23" width="1280" height="719" />
+    </state>
+    <state x="149" y="23" width="982" height="719" key="SettingsEditor/0.23.1280.719/-2560.-373.2560.1417@0.23.1280.719" timestamp="1605187448298" />
     <state x="305" y="66" width="670" height="676" key="search.everywhere.popup" timestamp="1605172737756">
       <screen x="0" y="23" width="1280" height="719" />
     </state>
