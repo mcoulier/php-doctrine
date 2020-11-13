@@ -2,10 +2,14 @@
 
 namespace App\Form;
 
+use App\Entity\Address;
 use App\Entity\Student;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\Teacher;
+use App\Repository\TeacherRepository;
 
 class StudentType extends AbstractType
 {
@@ -15,8 +19,16 @@ class StudentType extends AbstractType
             ->add('lastName')
             ->add('firstName')
             ->add('email')
-            ->add('teacher')
-        ;
+            ->add('teacher', EntityType::class, [
+            'class' => Teacher::class,
+            'query_builder' => function (TeacherRepository $er) {
+                return $er->createQueryBuilder('u')
+                    ->orderBy('u.firstName', 'ASC');
+            },
+            'choice_label' => 'firstName',
+        ])
+            ->add('address', AddressType::class);
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

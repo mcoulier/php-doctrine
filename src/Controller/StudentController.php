@@ -3,12 +3,17 @@
 namespace App\Controller;
 
 use App\Entity\Student;
+use App\Entity\Teacher;
 use App\Form\StudentType;
+use App\Form\TeacherType;
 use App\Repository\StudentRepository;
+use App\Repository\TeacherRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use function Sodium\add;
 
 /**
  * @Route("/student")
@@ -60,7 +65,6 @@ class StudentController extends AbstractController
     public function show(Student $student): Response
     {
         $studentTeacher = $student->getTeacher();
-        var_dump($studentTeacher);
         return $this->render('student/show.html.twig', [
             'student' => $student,
         ]);
@@ -75,6 +79,7 @@ class StudentController extends AbstractController
     public function edit(Request $request, Student $student): Response
     {
         $form = $this->createForm(StudentType::class, $student);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
